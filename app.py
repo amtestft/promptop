@@ -11,6 +11,24 @@ css_path = os.path.join(os.path.dirname(__file__), "style.css")
 with open(css_path) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
+import streamlit.components.v1 as components
+
+# Inserisci lo script Google Tag Manager
+gtag_script = """
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-961G2C435M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-961G2C435M');
+</script>
+"""
+
+# Iniettiamo lo script nella pagina
+components.html(gtag_script, height=0)
+
 import base64
 from pathlib import Path
 def img_to_bytes(img_path):
