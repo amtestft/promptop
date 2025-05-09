@@ -29,9 +29,6 @@ gtag_script = """
 # Inietta lo script nella pagina
 components.html(gtag_script, height=0)
 
-# Iniettiamo lo script nella pagina
-components.html(gtag_script, height=0)
-
 import base64
 from pathlib import Path
 def img_to_bytes(img_path):
