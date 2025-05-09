@@ -29,6 +29,14 @@ gtag_script = """
 # Inietta lo script nella pagina
 components.html(gtag_script, height=0)
 
+# Inietta il blocco noscript GTM (non è perfetto, ma funziona per la maggior parte dei casi)
+components.html("""
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWWX9G6Q"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+""", height=0)
+
 import base64
 from pathlib import Path
 def img_to_bytes(img_path):
