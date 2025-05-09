@@ -13,8 +13,8 @@ with open(css_path) as f:
 
 import streamlit.components.v1 as components
 
-# Inserisci lo script Google Tag Manager
-gtag_script = """
+# Inietta il Google Tag nella pagina
+components.html("""
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-961G2C435M"></script>
 <script>
@@ -24,7 +24,7 @@ gtag_script = """
 
   gtag('config', 'G-961G2C435M');
 </script>
-"""
+""", height=0)
 
 # Iniettiamo lo script nella pagina
 components.html(gtag_script, height=0)
