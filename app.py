@@ -31,14 +31,14 @@ def img_to_base64(img_path):
 
 footer_logo_path = "loghi png_Tavola disegno 1.png"
 
-st.markdown(
-    f"""
-    <div style='position: absolute; top: 1rem; left: 1rem; z-index: 10;'>
-        <img src="data:image/png;base64,{img_to_base64(footer_logo_path)}" style="width: 120px;" />
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+#st.markdown(
+#    f"""
+#    <div style='position: absolute; top: 1rem; left: 1rem; z-index: 10;'>
+#        <img src="data:image/png;base64,{img_to_base64(footer_logo_path)}" style="width: 120px;" />
+#    </div>
+#    """,
+#    unsafe_allow_html=True
+#)
 
 
 st.title("PrompTop")
