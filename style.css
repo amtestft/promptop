@@ -1,0 +1,123 @@
+/* custom.css - Streamlit GUM Dashboard Custom Styles */
+
+/* 1. Font */
+body, .block-container {
+    font-family: 'Gotham HTF', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* 2. Theme colors */
+:root {
+    --primary-color: #38D430;
+    --background-color: #FFFFFF;
+    --secondary-bg-color: #F7F7F7;
+    --text-color: #000000;
+}
+
+/* 3. General background */
+.stApp {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Estende il contenuto a tutta la larghezza della finestra */
+.block-container {
+    max-width: 80% !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+/* 4. Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--secondary-bg-color);
+    min-width: 200px !important;
+    overflow-x: hidden;
+    padding: 1rem;
+}
+div[data-testid="stSidebarResizer"] {
+    display: none !important;
+}
+.stSidebar .stButton>button, .stSidebar .stSlider>div {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+}
+
+/* 5. Headers */
+h1, .streamlit-expanderHeader {
+    color: var(--primary-color);
+    text-align: center;
+}
+h2 {
+    color: var(--text-color);
+    padding: 4px;
+    border-radius: 4px;
+}
+
+/* 6. Tabs */
+[role="tablist"] {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    border: 1px solid var(--primary-color);
+    font-size: 1.5rem !important;
+}
+[role="tab"] {
+    font-size: 1.5rem !important;
+    padding: 0.5rem 1rem;
+}
+
+/* 7. Metric Boxes */
+.stMetric {
+    background-color: #F9F9F9;
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    padding: 1rem;
+    color: var(--text-color);
+}
+
+/* Rende visibile il bordo verde su input e textarea */
+textarea, input {
+    border: 1px solid #38D430 !important;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+
+/* 8. DataFrames */
+.stDataFrame > div {
+    border: 1px solid #E0E0E0;
+}
+
+/* 9. Charts */
+.vega-embed {
+    background-color: transparent !important;
+}
+
+/* 10. Footer */
+.footer {
+    text-align: center;
+    padding: 8px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+.footer img {
+    margin-top: 4px;
+    width: 50px;
+}
+
+/* 11. Fix per prompt box troppo scuro (dall'immagine) */
+textarea, input, select, button {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+/* 12. Dropdown migliorato */
+.stSelectbox > div {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: var(--text-color);
+}
