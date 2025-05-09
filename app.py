@@ -29,7 +29,7 @@ def img_to_base64(img_path):
 
 # Titolo
 
-footer_logo_path = "loghi png_Tavola disegno 1.png"
+#footer_logo_path = "loghi png_Tavola disegno 1.png"
 
 #st.markdown(
 #    f"""
