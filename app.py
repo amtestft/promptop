@@ -11,30 +11,6 @@ css_path = os.path.join(os.path.dirname(__file__), "style.css")
 with open(css_path) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-import streamlit.components.v1 as components
-
-# Definisci il contenuto del Google tag
-gtag_script = """
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NWWX9G6Q');</script>
-<!-- End Google Tag Manager -->
-"""
-
-# Inietta lo script nella pagina
-components.html(gtag_script, height=0)
-
-# Inietta il blocco noscript GTM (non è perfetto, ma funziona per la maggior parte dei casi)
-components.html("""
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWWX9G6Q"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-""", height=0)
-
 import base64
 from pathlib import Path
 def img_to_bytes(img_path):
