@@ -101,6 +101,17 @@ def rewrite_prompt_with_feedback(prompt, feedback):
         f"Prendi questo prompt:\n{prompt}\n\n"
         f"E riformulalo tenendo conto delle seguenti osservazioni:\n{feedback}\n\n"
         "Riscrivi il prompt ottimizzato. Restituisci solo il testo del prompt, senza spiegazioni o commenti."
+        "Inserisci anche le seguenti istruzioni:"
+        "Fornisci una risposta sintetica e diretta, senza ripetizioni né frasi introduttive generiche."
+        "Evita spiegazioni ovvie o banali che presuppongono conoscenze di base già note."
+        "Non aggiungere dettagli superflui o informazioni non richieste."
+        "Rimani strettamente aderente alla domanda posta, senza andare fuori tema."
+        "Usa uno stile conciso, tecnico e focalizzato sui concetti chiave richiesti."
+        "Evita generalizzazioni e fornisci solo informazioni specifiche e rilevanti."
+        "Non includere disclaimer, avvertenze o frasi di circostanza."
+        "Presenta la risposta in elenco puntato o numerato se aiuta la chiarezza."
+        "Non semplificare eccessivamente i concetti: punta a un livello medio-alto di precisione tecnica."
+        "Evita espressioni vaghe come 'potrebbe essere', 'in alcuni casi', a meno che non siano strettamente necessarie per correttezza concettuale."
     )
     response = model.generate_content(rewrite_prompt)
     return response.text.strip()
